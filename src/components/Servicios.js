@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence  } from "framer-motion";
-import { 
-  FaTree, 
-  FaPaintRoller, 
-  FaCamera, 
-  FaBolt, 
-  FaShieldAlt,
-  FaInfoCircle
+import { motion, AnimatePresence } from "framer-motion";
+import {
+    FaTree,
+    FaPaintRoller,
+    FaCamera,
+    FaBolt,
+    FaShieldAlt,
+    FaInfoCircle
 } from "react-icons/fa";
 
 const Servicios = () => {
@@ -94,23 +94,23 @@ const Servicios = () => {
     return (
         <section id="servicios" className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
             <div className="max-w-6xl mx-auto px-6 text-center">
-                <motion.h2 
+                <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-3xl md:text-4xl font-bold mb-12 text-red-600"
+                    className="text-3xl md:text-4xl font-bold mb-12 text-[#1B3894]"
                 >
                     Nuestros Servicios
                 </motion.h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ 
-                                duration: 0.5, 
-                                delay: index * 0.1 
+                            transition={{
+                                duration: 0.5,
+                                delay: index * 0.1
                             }}
                             className={`
                                 relative group overflow-hidden
@@ -136,7 +136,7 @@ const Servicios = () => {
                             </p>
 
                             {/* Botón de información */}
-                            <button 
+                            <button
                                 onClick={() => handleServiceClick(index)}
                                 className={`
                                     absolute top-4 right-4 
@@ -159,8 +159,8 @@ const Servicios = () => {
                                     >
                                         <ul className="space-y-2 text-left">
                                             {service.details.map((detail, detailIndex) => (
-                                                <li 
-                                                    key={detailIndex} 
+                                                <li
+                                                    key={detailIndex}
                                                     className={`
                                                         flex items-center 
                                                         ${service.color}

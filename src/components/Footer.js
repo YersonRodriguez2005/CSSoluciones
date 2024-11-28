@@ -19,19 +19,19 @@ const Footer = () => {
         <footer className="bg-white shadow-md w-full py-8">
             <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
                 {/* Redes Sociales */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="text-center md:text-left"
                 >
-                    <h3 className="text-xl font-bold text-red-600 mb-4">Síguenos</h3>
-                    <div className="flex justify-center md:justify-start space-x-5 text-yellow-600">
+                    <h3 className="text-xl font-bold text-[#1B3894] mb-4">Síguenos</h3>
+                    <div className="flex justify-center md:justify-start space-x-5 text-[#15AE5C]">
                         {socialLinks.map(({ icon: Icon, href, label }) => (
                             <motion.a
                                 key={label}
                                 href={href}
-                                className="hover:text-red-600 transition-all duration-300"
+                                className="hover:text-[#1B3894] transition-all duration-300"
                                 whileHover={{ scale: 1.2 }}
                                 aria-label={label}
                             >
@@ -42,19 +42,19 @@ const Footer = () => {
                 </motion.div>
 
                 {/* Enlaces rápidos */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-center"
                 >
-                    <h3 className="text-xl font-bold text-red-600 mb-4">Enlaces rápidos</h3>
+                    <h3 className="text-xl font-bold text-[#1B3894] mb-4">Enlaces rápidos</h3>
                     <div className="space-y-2">
                         {navLinks.map(({ name, href, icon: Icon }) => (
                             <motion.a
                                 key={name}
                                 href={href}
-                                className="flex items-center justify-center hover:text-red-600 transition-all duration-300 text-yellow-600 space-x-2"
+                                className="flex items-center justify-center hover:text-[#1B3894] transition-all duration-300 text-[#15AE5C] space-x-2"
                                 whileHover={{ scale: 1.1 }}
                             >
                                 <Icon size={18} />
@@ -65,28 +65,28 @@ const Footer = () => {
                 </motion.div>
 
                 {/* Información de Contacto */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="text-center md:text-right"
                 >
-                    <h3 className="text-xl font-bold text-red-600 mb-4">Contacto</h3>
-                    <p className="text-yellow-600">
+                    <h3 className="text-xl font-bold text-[#1B3894] mb-4">Contacto</h3>
+                    <p className="text-[#15AE5C]">
                         Teléfono: +57 312 445 7755
                     </p>
-                    <p className="text-yellow-600">
+                    <p className="text-[#15AE5C]">
                         Email: info@csoluciones.com
                     </p>
                 </motion.div>
             </div>
 
             {/* Copyright */}
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="text-center mt-8 pt-4 border-t border-gray-200 text-yellow-600"
+                className="text-center mt-8 pt-4 border-t border-gray-200 text-[#15AE5C]"
             >
                 © 2024 C.S. Soluciones. Todos los derechos reservados.
             </motion.div>

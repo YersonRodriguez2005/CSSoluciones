@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebook, FaWhatsapp, FaBars, FaTimes, FaHome, FaTools, FaEnvelope, FaImage } from "react-icons/fa";
-import logo from "../img/logo.png";
+import logo from "../img/logo.jpg";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +10,14 @@ const Header = () => {
         { name: "Inicio", href: "#inicio", icon: FaHome },
         { name: "Servicios", href: "#servicios", icon: FaTools },
         { name: "Contacto", href: "#contacto", icon: FaEnvelope },
-        { name: "Galería", href: "#galeria", icon: FaImage }
+        { name: "Galería", href: "#galeria", icon: FaImage },
     ];
-    
 
     const socialLinks = [
-        { icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=100093573220764", label: "Facebook" },
-        { icon: FaWhatsapp, href: "https://wa.me/573124457755", label: "WhatsApp" }
+        { icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=61556186020221", label: "Facebook" },
+        { icon: FaWhatsapp, href: "https://wa.me/573124457755", label: "WhatsApp" },
     ];
-    
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -36,16 +35,16 @@ const Header = () => {
                     <img
                         src={logo}
                         alt="CS Soluciones Logo"
-                        className="h-12 w-12 mr-3 rounded-full object-cover"
+                        className="h-10 w-10 mr-2 rounded-full object-cover sm:h-12 sm:w-12"
                     />
-                    <h1 className="text-xl font-bold text-red-600 hidden md:block">
+                    <h1 className="text-lg sm:text-xl font-bold text-[#1B3894] hidden sm:block">
                         C.S.Soluciones
                     </h1>
                 </motion.div>
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-red-600"
+                    className="md:hidden text-[#1B3894]"
                     onClick={toggleMenu}
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 >
@@ -53,12 +52,12 @@ const Header = () => {
                 </button>
 
                 {/* Navigation Links - Desktop */}
-                <nav className="hidden md:flex space-x-6 text-yellow-600">
+                <nav className="hidden md:flex space-x-6 text-[#15AE5C]">
                     {navLinks.map(({ name, href, icon: Icon }) => (
                         <motion.a
                             key={name}
                             href={href}
-                            className="flex items-center hover:text-red-600 transition-all duration-300 font-medium space-x-2"
+                            className="flex items-center hover:text-[#1B3894] transition-all duration-300 font-medium space-x-2"
                             whileHover={{ scale: 1.1 }}
                             aria-label={name}
                         >
@@ -69,16 +68,16 @@ const Header = () => {
                 </nav>
 
                 {/* Social Icons */}
-                <div className="hidden md:flex space-x-5 text-yellow-600">
+                <div className="hidden md:flex space-x-5 text-[#15AE5C]">
                     {socialLinks.map(({ icon: Icon, href, label }) => (
                         <motion.a
                             key={label}
                             href={href}
-                            className="hover:text-red-600 transition-all duration-300"
+                            className="hover:text-[#1B3894] transition-all duration-300"
                             whileHover={{ scale: 1.2 }}
                             aria-label={label}
                         >
-                            <Icon size={25} />
+                            <Icon size={24} />
                         </motion.a>
                     ))}
                 </div>
@@ -97,13 +96,13 @@ const Header = () => {
                                     <motion.a
                                         key={name}
                                         href={href}
-                                        className="text-2xl text-yellow-600 hover:text-red-600 flex items-center space-x-2"
+                                        className="text-lg sm:text-2xl text-[#15AE5C] hover:text-[#1B3894] flex items-center space-x-2"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: navLinks.indexOf(name) * 0.1 }}
                                         onClick={toggleMenu}
                                     >
-                                        <Icon size={24} />
+                                        <Icon size={20} />
                                         <span>{name}</span>
                                     </motion.a>
                                 ))}
@@ -112,7 +111,7 @@ const Header = () => {
                                         <motion.a
                                             key={label}
                                             href={href}
-                                            className="text-yellow-600 hover:text-red-600"
+                                            className="text-[#15AE5C] hover:text-[#1B3894]"
                                             whileHover={{ scale: 1.2 }}
                                             aria-label={label}
                                         >
