@@ -16,7 +16,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-white shadow-md w-full py-8">
+        <footer id="contacto" className="bg-white shadow-md w-full py-8">
             <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
                 {/* Redes Sociales */}
                 <motion.div
